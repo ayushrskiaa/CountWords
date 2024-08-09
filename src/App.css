@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+ 
+}
+.body{
+  background-color: #61dafb;
 }
 
 .App-logo {
@@ -9,7 +13,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 1s linear;
   }
 }
 
@@ -22,6 +26,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  /* background-color: #e24a4a; */
 }
 
 .App-link {
@@ -35,4 +40,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+.name{
+  color: aqua;
+  background-color: black;
+  text-decoration: underline;
+  font-size:5vw;
+  font-weight: 900;
 }

@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 
 
 export default function TextForm(props) {
+  
     const handleUpClick=()=>{
       console.log("Uppercase was cliked"+ text);
       let newText=text.toUpperCase(); 
@@ -26,8 +27,15 @@ export default function TextForm(props) {
       // alert("Text copied")
       setTimeout(() => {
         console.log("Copied")
+        
       }, 100);
     }
+
+    const handleSummary=()=>{
+      
+    }
+
+
 
     const handleOnChange=(event)=>{
       console.log("onchange");
@@ -40,7 +48,8 @@ export default function TextForm(props) {
     const [text, setText]=useState("");
     return (
     <>
-    <div className="mb-3 container my-4">
+   
+  <div className="mb-3 container my-4 ">
     <label for="exampleFormControlTextarea1" className="form-label "><h6>Enter the texts here</h6></label>
     
     <textarea className="form-control" rows="8" value={text} onChange={handleOnChange} id="myBox"></textarea>
@@ -48,6 +57,7 @@ export default function TextForm(props) {
     <button type="button" class="btn btn-primary mx-2 " onClick={handleLoClick}>Convert to Lowercase</button>
     <button type="button" class="btn btn-primary mx-2 " onClick={handleClearClick}>Clear text</button>
     <button type="button" class="btn btn-danger  mx-2 " onClick={handleCopy} >Copy to clipboard</button>
+    <button type="button" class="btn btn-danger  mx-2 " onClick={handleSummary} >Summary</button>
    
     </div>
 
@@ -58,11 +68,13 @@ export default function TextForm(props) {
       {/* <label for="exampleFormControlTextarea1" className="form-label "  >Example textarea</label> */}
       <h6>Preview</h6>
       
-      <textarea className="form-control" rows="8" value={text.length>0?text:"Enter something to preview it here"}  id="myBox "></textarea>
-      
+      <textarea className="form-control" rows="8" value={text.length>0?text:"Enter something to preview it here"}  id="myBox "> </textarea>
+      <button type="button" class="btn btn-primary  mx-2 my-3" onClick={handleCopy}>📋 Copy</button>
       {/* <p>{text}</p> */}
     </div>
     
     </>
   )
 }
+
+
